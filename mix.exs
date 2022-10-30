@@ -7,6 +7,8 @@ defmodule Mbox.MixProject do
       version: "0.1.0",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
+      description: description(),
+      package: package(),
       deps: deps()
     ]
   end
@@ -25,4 +27,16 @@ defmodule Mbox.MixProject do
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
   end
+
+  defp description() do
+    "Read and write MBOX files."
+  end
+
+  defp package() do
+    [
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/konimarti/elixir-mbox"}
+    ]
+  end
+
 end
